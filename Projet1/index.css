@@ -1,0 +1,494 @@
+
+body {
+
+    /* on initialise le navigateur web en enlevant les margins, padding*/
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: rgb(251, 248, 248);
+    height: 100px;
+}
+
+header img {
+    height: 80px;
+}
+
+header input::placeholder {
+    color: #000; /* Placeholder en noir */
+}
+
+header input[type="text"] {
+    margin-right: 10px;
+}
+
+header button {
+    border: 1px solid #999;
+    background-color: #fff;
+    color: #333;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #ddd;
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 100px;
+    padding-right: 10px;
+    height: 50px;
+    border-bottom: 3px solid #800080;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+nav ul li {
+    flex-grow: 1;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    border-right: 1px solid #ccc;
+}
+
+nav ul li:last-child {
+    border-right: none;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #007bff; /* Couleur bleue pour les liens */
+    font-weight: bold;
+    font-size: 18px;
+    background-color: #f0f0f0; 
+}
+
+/* Dropdown menu */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #e0e0e0;
+    list-style-type: none;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid #007bff;
+    width: 180px;
+}
+
+/* Afficher le menu déroulant au survol */
+nav ul li:hover ul {
+    display: block;
+}
+
+/* Style des sous-menus */
+nav ul li ul li {
+    padding: 5px 10px;
+    text-align: left;
+}
+
+nav ul li ul li a {
+    color: #007bff;
+    font-weight: normal;
+    font-size: 16px; /* Taille légèrement plus petite pour les sous-liens */
+}
+
+/* Ajouter '>' avant les sous-liens */
+nav ul li ul li a:before {
+    content: '>'; /* Ajouter le symbole '>' avant les sous-liens */
+    margin-right: 5px; /* Espacement après le '>' */
+    color: #007bff;
+}
+
+nav ul li ul li a:hover {
+    background-color: #c0c0c0;
+}
+
+/* Phrase "Accueil > Mon tableau de bord" */
+.breadcrumb {
+    font-size: 14px;
+    color: #007bff;
+    margin-top: 2em;
+}
+
+
+.breadcrumb a:first-child {
+    font-weight: bold;
+    color: #800080; /* Violet */
+}
+
+ 
+.breadcrumb a {
+    color: #007bff; /* Lien bleu */
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb span {
+    color: purple;
+}
+
+
+
+
+/* Main section - Titre "Mon tableau de bord" */
+main h1 {
+    color: #800080; /* Violet */
+    font-weight: bold; /* En gras */
+}
+
+
+main h1, aside .bg-light h3 {
+    margin-top:40px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #800080;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left; /* Alignement à gauche */
+    margin-bottom: 20px;
+    line-height: 1.5; /* Hauteur de ligne cohérente */
+}
+
+/* Texte sous le titre principal */
+main p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #800080; /* Texte en violet */
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+/* Les images dans la section principale */
+.main-section .col-md-4 img {
+    float: left;
+    margin-right: 20px; 
+    margin-bottom: 0;
+}
+
+/* Titres à côté des images */
+.main-section h3 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #0073e6; /* Couleur plus foncée pour les titres */
+    text-align: center;
+    margin: 0;
+    display: inline-block;
+    vertical-align: middle; /* Centrer verticalement avec l'image */
+}
+
+/* Texte descriptif en dessous de l'image */
+.main-section p {
+    font-size: 12px;
+    color: #000; /* Texte en noir */
+    margin-top: 10px;
+    clear: both;
+}
+
+
+.main-section .col-md-4 img {
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px; /* Plus d'espace sous l'image */
+}
+
+/* Section aside - Titre "Les actualités" */
+aside .bg-light {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 20px;
+    overflow: hidden;
+    border-radius: 10px;
+    height: auto;
+    padding-top: 20px;
+    text-align: left;
+}
+
+
+
+
+
+
+aside .bg-light .actualites-container {
+    background-color: #ff0000; /* Le conteneur de "Les actualités" est en rouge */
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left; /* Alignement du texte à gauche */
+}
+
+aside .bg-light .actualites-container ul li {
+    color: #000; /* Couleur du texte noir */
+    text-align: left;
+}
+
+aside .bg-light .actualites-container ul li span.date {
+    color: #ff0000; /* Les dates sont en rouge */
+    font-weight: bold;
+}
+
+/* Liens "Toutes les astuces" et "Toutes les actualités" */
+aside div a {
+    color: #ff0000;
+    font-weight: bold;
+    text-decoration: none;
+    float: right;
+    margin-top: 10px;
+}
+
+aside div a:hover {
+    text-decoration: underline;
+}
+
+/* Suppression des points noirs à gauche du texte */
+aside ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+/* Texte des liens dans "Les astuces" et "Les actualités" */
+aside ul li {
+    text-align: left;
+}
+
+aside ul li a {
+    color: #000;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+aside ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Dates dans "Les actualités" en rouge */
+aside ul li span.date {
+    color: #ff0000;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Section "Les actualités" */
+aside .actualites-container {
+    background-color: #ff0000; /* Couleur de fond rouge */
+    color: #fff; /* Couleur du texte */
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left; /* Alignement du texte à gauche */
+}
+
+/* Assurer que le texte à l'intérieur est bien aligné */
+aside .actualites-container ul li {
+    color: #000; /* Couleur du texte en noir */
+    text-align: left; /* Alignement à gauche */
+    margin-left: 0; /* Supprimer tout décalage de gauche */
+}
+
+/* Liens dans "Les actualités" */
+aside .actualites-container ul li a {
+    color: #000;
+    font-weight: normal;
+    text-decoration: none;
+}
+
+aside .bg-light a {
+    color: #800080; /* Violet */
+}
+
+aside .bg-light a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+footer {
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px;
+    text-align: left;
+    position: relative; /* Ajout pour gérer la position des éléments */
+}
+
+footer h6 {
+    font-size: 14px; /* Réduction de la taille des titres */
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer ul li {
+    margin-bottom: 5px;
+}
+
+footer ul li a {
+    font-size: 12px; /* Réduction de la taille des sous-liens */
+    color: #fff;
+    text-decoration: none; /* Enlever le soulignement */
+}
+
+/* Ajouter un gros point avant chaque <li> */
+footer ul li::before {
+    content: '•'; /* Point noir */
+    color: #fff; /* Couleur du point */
+    display: inline-block;
+    width: 1em;
+    margin-right: 5px;
+}
+
+footer ul li a:hover {
+    text-decoration: underline;
+}
+
+
+
+footer img {
+    width: 80px; /* Taille du logo OJD */
+    margin-bottom: 20px;
+}
+
+/* Footer bottom bar */
+footer .bottom-bar {
+    background-color: #003366; /* Bleu foncé */
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* --- Modifications pour les titres "LES ASTUCES" et "Les actualités" --- */
+
+/* Non-responsive version (format desktop) */
+aside .bg-light h3, aside .actualites-container h3 {
+    background-color: #800080; /* Couleur de fond violette */
+    color: #fff; /* Couleur du texte blanche */
+    padding: 15px; /* Augmenter le padding pour couvrir plus d'espace */
+    margin: -20px -20px 10px -20px; /* Enlever les marges internes et compenser */
+    width: calc(100% + 40px); /* Forcer la largeur à dépasser celle du conteneur */
+    box-sizing: border-box; /* S'assurer que le padding est inclus dans la largeur */
+    text-align: left; /* Alignement du texte à gauche */
+}
+
+aside .bg-light, aside  {
+    padding: 20px;
+    margin-bottom: 20px; /* Espacement sous chaque conteneur */
+    border-radius: 5px; /* Garde les coins arrondis */
+    position: relative; /* S'assurer que les ajustements de marges fonctionnent */
+}
+
+
+aside .actualites-container {
+    background-color: #ff0000; /* Couleur de fond rouge */
+    padding: 20px;
+    border-radius: 5px;
+    text-align: left; /* Alignement à gauche */
+}
+
+aside .actualites-container ul li {
+    color: #000; /* Couleur du texte en noir */
+    text-align: left; /* Alignement à gauche */
+    margin-left: 0;
+    line-height: 1.5; /* Amélioration de l'espacement entre les lignes */
+}
+
+
+
+/* PARTIT RESPONSIVE FORMAT MOBILE */
+@media (max-width: 768px) {
+    /* Assurer que l'image (logo), le champ de recherche, et la navbar sont bien positionnés */
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header img {
+        max-width: 80%; /* Image prend 80% de la largeur */
+        height: auto;
+        margin-bottom: 20px; /* Espacement sous l'image */
+    }
+
+    header form {
+        width: 100%;
+        margin-bottom: 20px; /* Espacement sous le champ de recherche */
+        margin-top: 8px;
+    }
+
+    /* Navbar doit être sous le header */
+    nav {
+        display: block; /* Forcer la navbar à être un bloc distinct */
+        width: 100%;
+        margin-top: 20px; /* Ajouter un espacement entre le header et la navbar */
+        margin-bottom: 17em /* Gros espacement après la navbar pour visualisation */
+    }
+
+    /* Navbar en disposition verticale */
+    nav ul {
+        flex-direction: column; /* Disposer les éléments verticalement */
+        width: 100%; /* Prendre toute la largeur de l'écran */
+        padding: 0;
+        margin: 0; /* Enlever tout espace au-dessus de la navbar */
+    }
+
+    nav ul li {
+        width: 100%; /* Chaque élément prend toute la largeur */
+        border-bottom: 1px solid #ccc; /* Séparer les liens par des bordures */
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px; /* Taille de police pour mobile */
+        display: block;
+        width: 100%; /* Assurer que les liens prennent toute la largeur */
+        color: #007bff;
+    }
+
+    /* Phrase "Accueil > Mon tableau de bord" */
+    .breadcrumb {
+        text-align: center;
+        width: 100%;
+        padding: 10px;
+        background-color: #f5f5f5;
+        border-bottom: 1px solid #ccc;
+        font-size: 14px;
+        color: #000;
+        margin-top: 20px; /* Assurer un espacement sous la navbar */
+    }
+}
